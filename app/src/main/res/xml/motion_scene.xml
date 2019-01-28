@@ -5,14 +5,59 @@
 
     <Transition
             app:constraintSetStart="@id/start"
-            app:constraintSetEnd="@id/step2"
+            app:constraintSetEnd="@id/end"
             app:interpolator="linear"
-            app:duration="500">
+            app:duration="1500">
 
         <OnClick
                 app:target="@+id/fab"/>
-    </Transition>
 
+        <KeyFrameSet>
+            <KeyPosition
+                    app:keyPositionType="parentRelative"
+                    app:percentY="1.0"
+                    app:percentX="0.5"
+                    app:framePosition="25"
+                    app:target="@id/fab"/>
+            <KeyPosition
+                    app:keyPositionType="parentRelative"
+                    app:percentY="0.5"
+                    app:percentX="0.4"
+                    app:framePosition="35"
+                    app:target="@id/fab"/>
+            <KeyPosition
+                    app:keyPositionType="parentRelative"
+                    app:percentY="1.0"
+                    app:percentX="0.3"
+                    app:framePosition="45"
+                    app:target="@id/fab"/>
+            <KeyPosition
+                    app:keyPositionType="parentRelative"
+                    app:percentY="0.7"
+                    app:percentX="0.2"
+                    app:framePosition="55"
+                    app:target="@id/fab"/>
+            <KeyPosition
+                    app:keyPositionType="parentRelative"
+                    app:percentY="1.0"
+                    app:percentX="0.1"
+                    app:framePosition="65"
+                    app:target="@id/fab"/>
+            <KeyPosition
+                    app:keyPositionType="parentRelative"
+                    app:percentY="0.9"
+                    app:percentX="0.05"
+                    app:framePosition="75"
+                    app:target="@id/fab"/>
+            <KeyPosition
+                    app:keyPositionType="parentRelative"
+                    app:percentY="1.0"
+                    app:percentX="0.025"
+                    app:framePosition="85"
+                    app:target="@id/fab"/>
+        </KeyFrameSet>
+
+    </Transition>
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
@@ -26,128 +71,7 @@
         </Constraint>
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/step2">
-        <Constraint
-                android:id="@id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="normal"
-                android:layout_marginEnd="0dp"
-                android:layout_marginBottom="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-        </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/step3"
-                   app:transitionEasing="decelerate"
-                   app:duration="6000">
-        <Constraint
-                android:id="@id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="normal"
-                android:layout_marginEnd="50dp"
-                android:layout_marginBottom="100dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-        </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/step4"
-                   app:transitionEasing="decelerate">
-        <Constraint
-                android:id="@id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="normal"
-                android:layout_marginEnd="100dp"
-                android:layout_marginBottom="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-        </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/step5"
-                   app:transitionEasing="decelerate">
-        <Constraint
-                android:id="@id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="normal"
-                android:layout_marginEnd="150dp"
-                android:layout_marginBottom="50dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-        </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/step6"
-                   app:transitionEasing="decelerate">
-        <Constraint
-                android:id="@id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="normal"
-                android:layout_marginEnd="200dp"
-                android:layout_marginBottom="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-        </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/step7"
-                   app:transitionEasing="decelerate">
-        <Constraint
-                android:id="@id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="normal"
-                android:layout_marginEnd="250dp"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-        </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/step8"
-                   app:transitionEasing="decelerate">
-        <Constraint
-                android:id="@id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="normal"
-                android:layout_marginEnd="300dp"
-                android:layout_marginBottom="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-        </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/step9"
-                   app:transitionEasing="decelerate">
-        <Constraint
-                android:id="@id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="normal"
-                android:layout_marginEnd="350dp"
-                android:layout_marginBottom="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-        </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/step10"
-                   app:transitionEasing="linear">
+    <ConstraintSet android:id="@+id/end">
         <Constraint
                 android:id="@id/fab"
                 android:layout_width="wrap_content"
